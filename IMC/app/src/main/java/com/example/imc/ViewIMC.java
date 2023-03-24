@@ -16,8 +16,8 @@ public class ViewIMC extends AppCompatActivity {
 
         mostrar = findViewById(R.id.txtMostrar);
         Intent it=getIntent();
-        String pesoST = it.getStringExtra("ps");
-        String alturaST = it.getStringExtra("al");
+        String pesoST = it.getStringExtra("peso");
+        String alturaST = it.getStringExtra("altura");
 
         Double peso = Double.valueOf(pesoST);
         Double altura = Double.valueOf(alturaST);
