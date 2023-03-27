@@ -17,19 +17,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         conta = (Button) findViewById(R.id.bt_imc);
-        EditText peso = findViewById(R.id.txtPeso);
-        EditText altura = findViewById(R.id.txtAltura);
+        EditText pesotxt = findViewById(R.id.txtPeso);
+        EditText alturatxt = findViewById(R.id.txtAltura);
         conta.setOnClickListener(new View.OnClickListener() {
             @Override
              public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this,ViewIMC.class);
 
-                Bundle params = new Bundle();
-//                params.putString("peso",peso.getText().toString());
-//                params.putString("altura",altura.getText().toString());
-                params.putString("peso","80");
-                params.putString("altura","1.50");
-         intent.putExtras(params);
+                double peso = Double.parseDouble(pesotxt.getText().toString());
+                double altura = Double.parseDouble(alturatxt.getText().toString());
+
+
+
+                intent.putExtra("peso",peso);
+                intent.putExtra("altura",altura);
+                  intent.putExtras(intent);
 
                 startActivity(intent);
             }
