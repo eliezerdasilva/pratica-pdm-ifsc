@@ -24,18 +24,18 @@ public class MainActivity extends AppCompatActivity {
 
         criarBancoDados();
         inserirDados();
-        listarNotas();
+        listarNotas();  bancoDados = openOrCreateDatabase("notas", MODE_PRIVATE, null);
+        String sql = "INSERT INTO nota(titulo,txt) values(?,?)";
+        SQLiteStatement stmt = bancoDados.compileStatement(sql);
+        stmt.bindString(1, "eeee");
+        stmt.bindString(2, "4");
+        stmt.executeInsert();
+        bancoDados.close();
     }
 
     private void inserirDados() {
         try {
-            bancoDados = openOrCreateDatabase("notas", MODE_PRIVATE, null);
-            String sql = "INSERT INTO nota(titulo,txt) values(?,?)";
-            SQLiteStatement stmt = bancoDados.compileStatement(sql);
-            stmt.bindString(1, "eeee");
-            stmt.bindString(2, "4");
-            stmt.executeInsert();
-            bancoDados.close();
+
         }catch (Exception e){
             e.printStackTrace();
         }

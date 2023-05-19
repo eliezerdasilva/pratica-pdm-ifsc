@@ -5,7 +5,10 @@ public class Nota {
     String titulo;
     String txt;
 
-    public void Nota(){}
+    public Nota() {
+
+    }
+
 
     public Nota(String titulo, String txt) {
         this.titulo = titulo;
