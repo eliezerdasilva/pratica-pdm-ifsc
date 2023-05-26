@@ -13,7 +13,7 @@ import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
-    SQLiteDatabase db;
+    private SQLiteDatabase db;
     ListView listViewPessoas;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -17,23 +17,28 @@ import java.util.ArrayList;
 public class NotaDao extends SQLiteOpenHelper {
 
     private static final String DB_NOTAS = "db_notas";
+    private static final String ID = "_id";
     private static final int VERSAO_BANCO = 1;
     private Context ctx;
 
     private SQLiteOpenHelper SQLiteOpenHelper;
     SQLiteDatabase db = SQLiteOpenHelper.getWritableDatabase();
+
+
+
     public NotaDao(Context context) {
         super(context, DB_NOTAS, null, VERSAO_BANCO);
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase db) {
-        //criando a estrutura do banco de dados
-        String sql =( "CREATE TABLE IF NOT EXISTS nota ("+
-        "id Integer primary key autoincrement"+
-                ", titulo  Varchar"+
-                ", txt Varchar )");
-        db.execSQL(sql);
+        String sql = "CREATE TABLE nota("
+                + ID + " integer primary key autoincrement,"
+                + " titulo text,"
+                + " nota varchar)";
+
+
     }
 
     @Override
