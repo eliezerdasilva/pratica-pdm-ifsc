@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.mynotes'
+    namespace 'com.example.crudmynotes'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.mynotes"
+        applicationId "com.example.crudmynotes"
         minSdk 30
         targetSdk 33
         versionCode 1

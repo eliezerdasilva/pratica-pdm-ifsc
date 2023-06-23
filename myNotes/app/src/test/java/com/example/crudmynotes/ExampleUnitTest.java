@@ -1,4 +1,4 @@
-package com.example.mynotes;
+package com.example.crudmynotes;
 
 import org.junit.Test;
 
